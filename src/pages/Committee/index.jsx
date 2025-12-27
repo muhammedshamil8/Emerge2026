@@ -213,7 +213,7 @@ function index() {
         </motion.div>
       </section>
 
-      <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-4">
+      {/* <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-4">
         Advisory Board
       </h1>
       <section className="bg-secondary rounded-xl shadow-full-side mx-auto max-w-[800px] p-6 ">
@@ -234,7 +234,7 @@ function index() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </motion.div>
   );
 }
