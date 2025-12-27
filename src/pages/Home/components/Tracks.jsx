@@ -325,37 +325,44 @@ const Tracks = () => {
         className="!bg-secondary w-full min-h-[60%] flex items-center justify-center !-p-10 !rounded-2xl"
       >
         {ConferenceTrack ? (
-          <div className="-p-10 relative -mx-[26px] min-h-[80vh] -my-[26px] !rounded-2xl overflow-hidden overflow-y-auto h-full ">
+          <div className="-p-10 relative -mx-[26px] min-h-[80vh] -my-[26px] rounded-2xl overflow-y-auto max-h-[80vh]">
+            {/* ===== BACKGROUND IMAGE (FIXED) ===== */}
             <img
-              src={ConferenceTrack?.image_url_big}
-              className="absolute top-0 left-0 w-full h-full object-cover "
-              alt={ConferenceTrack?.title}
-              onLoad={() => setImageLoadedTrack(true)}
-              style={{ display: imageLoadedTrack ? "block" : "none" }}
+              src={ConferenceTrack.image_url_big}
+              alt={ConferenceTrack.title}
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
-            {!imageLoaded && <div>Loading Image...</div>}
+
+            {/* ===== OVERLAY ===== */}
             <div
-              className={classNames(
-                "absolute top-0 bottom-0 left-0 right-0",
-                ConferenceTrack?.shadow
-              )}
+              className={classNames("absolute inset-0", ConferenceTrack.shadow)}
             />
-            <div className="absolute top-0 bottom-0 w-full flex flex-col justify-between text-white">
-              <div className="py-4 bg-white/80 my-10 text-center">
-                <h1 className="text-xl sm:text-3xl font-semibold text-primary max-w-[250px] sm:max-w-[360px] mx-auto select-none">
-                  {ConferenceTrack?.title}
+
+            {/* ===== SCROLLABLE CONTENT ===== */}
+            <div className="relative z-10 max-h-[80vh] overflow-y-auto text-white">
+              {/* Title */}
+              <div className="py-6 bg-white/80 text-center">
+                <h1 className="text-xl sm:text-3xl font-semibold text-primary max-w-[360px] mx-auto">
+                  {ConferenceTrack.title}
                 </h1>
               </div>
-              <div className="text-center text-white leading-5 p-2 sm:text-lg font-medium mx-auto max-w-[800px]">
-                <p>{ConferenceTrack?.description}</p>
+
+              {/* Description */}
+              <div className="px-4 py-6 text-center max-w-[800px] mx-auto">
+                <p className="sm:text-lg font-medium">
+                  {ConferenceTrack.description}
+                </p>
               </div>
-              <div className="flex flex-col p-4 gap-3">
-                <h2 className="text-center text-white font-semibold text-lg sm:text-xl select-none">
+
+              {/* Topics */}
+              <div className="px-4 pb-10">
+                <h2 className="text-center font-semibold text-lg sm:text-xl mb-4">
                   Key topics include:
                 </h2>
-                <div className="bg-white p-4 rounded-xl text-black mx-auto max-w-[800px] mb-10">
+
+                <div className="bg-white p-4 rounded-xl text-black max-w-[800px] mx-auto">
                   <ul className="list-disc list-inside space-y-2 text-sm sm:text-base leading-relaxed">
-                    {ConferenceTrack?.topics?.map((topic, index) => (
+                    {ConferenceTrack.topics.map((topic, index) => (
                       <li key={index}>{topic}</li>
                     ))}
                   </ul>
@@ -364,7 +371,7 @@ const Tracks = () => {
             </div>
           </div>
         ) : (
-          <div>Loading ...</div>
+          <div className="p-10 text-center">Loading…</div>
         )}
       </Modal>
     </div>
