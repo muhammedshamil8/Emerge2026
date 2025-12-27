@@ -107,10 +107,8 @@ const Hero = () => {
               </div>
 
               <div className="text-[12px] sm:text-sm flex items-start gap-2 select-text">
-                {/* Icon */}
                 <FaWhatsapp className="text-green-500 mt-0.5" size={16} />
 
-                {/* Numbers */}
                 <div className="flex flex-col gap-1">
                   <a
                     href="https://wa.me/919961063747"

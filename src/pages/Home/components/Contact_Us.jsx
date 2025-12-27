@@ -98,7 +98,7 @@ const ContactUs = () => {
                     <div key={index}>
                       <h3 className='text-black font-medium'>{cordinator.name}</h3>
                       <p className='text-sm'>{cordinator.designation}</p>
-                      <span className='text-sm'>Mob: {cordinator.mobile}</span>
+                      <span className='text-sm select-text'>Mob: {cordinator.mobile}</span>
                     </div>
                   ))}
                 </div>
