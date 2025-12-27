@@ -42,7 +42,7 @@ const Hero = () => {
             Register Now →
           </button>
           <button
-            onClick={() => navigate("/abstract-submission")}
+            onClick={() => navigate("/register/abstract")}
             className="bg-white hover:bg-gray-100 text-primary font-semibold px-6 py-2  rounded-full shadow-lg border border-[#005188] flex items-center transition duration-300"
           >
             Abstract Submission
