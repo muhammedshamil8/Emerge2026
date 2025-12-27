@@ -105,12 +105,17 @@ export default function Footer() {
                 className="flex items-center gap-2 hover:text-green-600 transition-colors"
               >
                 <FaWhatsapp className="text-green-500" size={16} />
-                +91 99610 63747 (WhatsApp)
+                +91 9961063747
               </a>
 
               <span className="text-gray-400">|</span>
 
-              <span>+91 99952 66781</span>
+               <a
+                href="https://wa.me/9995266781"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 hover:text-green-600 transition-colors"
+              >+91 9995266781 </a>
             </div>
           </div>
         </div>

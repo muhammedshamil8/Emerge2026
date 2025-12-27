@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { Download } from "lucide-react";
 import EmeaBW from "@/assets/images/emea_bg.png";
 import { useNavigate } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -23,12 +24,14 @@ const Hero = () => {
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center pt-10 text-primary">
           EMERGE 2026
         </h2>
-        <p className="text-center sm:text-lg  text-[#000]">
-          Innovating Knowledge, Connecting Ideas and Research
-        </p>
+
         <h3 className="text-center text-xl md:text-2xl mt-2 text-[#000] font-semibold">
-       2ND LNTERDISCIPLINARY NTERNATIONAL CONFERENCE
+          2ND INTERDISCIPLINARY INTERNATIONAL CONFERENCE
         </h3>
+        <p className="text-center sm:text-lg  text-[#000]">
+          <span className="text-primary font-semibold">Innovation:</span>{" "}
+          Research, connection, Knowledge
+        </p>
         <h4 className="text-center text-md md:text-lg mt-1  font-semibold">
           <span className=" text-primary">04</span> &{" "}
           <span className=" text-primary">05</span> February 2025
@@ -78,14 +81,14 @@ const Hero = () => {
             <div className="flex-col md:flex-row flex items-center justify-between  mx-auto gap-[10px] md:gap-[26px]  max-w-[730px] w-full">
               <div className="flex flex-col sm:flex-row items-center justify-center   mx-auto gap-[10px] md:gap-[26px]  max-w-[730px] w-full">
                 <button className="rounded-lg flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-[4px] border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                  STUDENTS: Rs. 600
+                  STUDENTS: Rs. 550
                 </button>
                 <button className="rounded-lg border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                  FACULTIES: Rs. 900
+                  FACULTIES: Rs. 850
                 </button>
               </div>
               <button className="rounded-lg col-span-2  md:col-span-2 border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                RESEARCH SCHOLARS: Rs.850
+                RESEARCH SCHOLARS: Rs. 800
               </button>
             </div>
             <div className="border  border-[#005188] px-4 py-1.5 font-semibold text-center max-w-[730px] w-full mx-auto text-sm sm:text-md">
@@ -93,23 +96,40 @@ const Hero = () => {
               <span className="font-bold text-primary">Rs. 300</span> per day
             </div>
             <div className="flex justify-between w-full items-center max-w-[730px] mx-auto">
-              <div className="text-[12px] sm:text-sm">
+              <div className="text-[12px] sm:text-sm select-text">
                 <span className="font-medium">Contact: </span>
                 <a
                   href="mailto:emerge2026@emeacollege.ac.in"
-                  className="text-primary font-semibold select-text"
+                  className="text-primary font-semibold hover:underline"
                 >
                   emerge2026@emeacollege.ac.in
                 </a>
               </div>
-              <div className="text-[12px] sm:text-sm">
-                <span className="font-medium">Mob: </span>
-                <a
-                  href="tel:+919961063747"
-                  className="text-primary font-semibold select-text"
-                >
-                 9961063747
-                </a>
+
+              <div className="text-[12px] sm:text-sm flex items-start gap-2 select-text">
+                {/* Icon */}
+                <FaWhatsapp className="text-green-500 mt-0.5" size={16} />
+
+                {/* Numbers */}
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="https://wa.me/919961063747"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-green-600 transition-colors select-text"
+                  >
+                    +91 99610 63747
+                  </a>
+
+                  <a
+                    href="https://wa.me/919995266781"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-green-600 transition-colors select-text"
+                  >
+                    +91 99952 66781
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -119,23 +139,23 @@ const Hero = () => {
         <section className="bg-white relative z-10 max-w-[1000px] mx-auto px-4 py-6 rounded-3xl ">
           <div className=" mx-auto p-4 flex flex-col w-full gap-4 px-10">
             <h1 className="text-primary text-2xl md:text-3xl font-semibold text-center  md:my-2 ">
-              About EMERGE 2.0
+              About EMERGE 2026
             </h1>
             <p className="text-[#333] text-md md:text-lg font-medium text-justify">
-              <span className="text-primary">EMERGE 2.0</span>, the second
-              edition of EMEA’s flagship interdisciplinary conference, invites
+              <span className="text-primary">EMERGE 2026</span>, the second
+              edition of EMEA's flagship interdisciplinary conference, invites
               scholars, researchers, practitioners, and students to participate
               in a vibrant forum for dialogue, discovery, and collaboration. The
               conference seeks to address the challenges of a rapidly changing
-              world through rigorous scholarship and innovative perspectives.
+              world through rigorous scholarship and innovative perspectives
             </p>
             <p className="text-[#333] text-md md:text-lg font-medium text-justify">
-              Organised around three broad academic tracks—Humanities, Social
-              Sciences and Literature; Sciences; and Commerce and
-              Management—EMERGE 2.0 encourages interdisciplinary engagement that
-              transcends traditional boundaries. The conference aims to foster
-              meaningful scholarly exchange, generate actionable insights, and
-              envision equitable, sustainable, and humane futures.
+              Organised around three broad academic tracks Humanities, Social
+              Sciences and Literature: Sciences, and Commerce and
+              Management-EMERGE 2026 encourages interdisciplinary engagement
+              that transcends traditional boundaries. The conference aims to
+              foster meaningful scholarly exchange, generate actionable
+              insights, and envision equitable, sustainable, and humane futures.
             </p>
           </div>
         </section>

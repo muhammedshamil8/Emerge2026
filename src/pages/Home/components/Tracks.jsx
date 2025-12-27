@@ -107,7 +107,7 @@ const Tracks = () => {
         viewport={{ once: true }}
       >
         {/* Heading */}
-        <h6 className="text-sm sm:text-base font-medium tracking-wide uppercase text-gray-500">
+        <h6 className="font-medium">
           Conference Theme
         </h6>
 
@@ -169,7 +169,7 @@ const Tracks = () => {
         </div>
 
         {/* Objectives */}
-        <div className="mt-14 text-left">
+        {/* <div className="mt-14 text-left">
           <h2 className="text-lg md:text-2xl font-semibold text-[#005188] mb-4 text-center">
             Objectives of the Conference
           </h2>
@@ -196,7 +196,7 @@ const Tracks = () => {
               beyond the conference.
             </li>
           </ul>
-        </div>
+        </div> */}
       </motion.section>
 
       {/* Conference Tracks */}
