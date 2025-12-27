@@ -1,6 +1,6 @@
 import { Mail, Globe } from "lucide-react";
 import { EMERGELOGO2 } from "@/assets/logo";
-import { NavLink } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 function scrollToSection(id) {
   const el = document.getElementById(id);
@@ -74,30 +74,43 @@ export default function Footer() {
             </div>
 
             {/* Contact */}
-            <div className="flex flex-wrap items-center gap-6">
-              <a
-                href="mailto:mail@emeacollege.ac.in"
-                className="flex items-center gap-2 transition-colors hover:text-[#005188]"
-              >
-                <Mail
-                  size={14}
-                  className="transition-transform hover:scale-110"
-                />
-                mail@emeacollege.ac.in
-              </a>
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-wrap items-center gap-6">
+                <a
+                  href="mailto:emerge2026@emeacollege.ac.in"
+                  className="flex items-center gap-2 transition-colors hover:text-[#005188]"
+                >
+                  <Mail size={14} />
+                  emerge2026@emeacollege.ac.in
+                </a>
 
+                <a
+                  href="https://emeacollege.ac.in"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 transition-colors hover:text-[#005188]"
+                >
+                  <Globe size={14} />
+                  emeacollege.ac.in
+                </a>
+              </div>
+            </div>
+
+            {/* WhatsApp */}
+            <div className="flex items-center gap-4 text-xs text-gray-500">
               <a
-                href="https://emeacollege.ac.in"
+                href="https://wa.me/919961063747"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 transition-colors hover:text-[#005188]"
+                className="flex items-center gap-2 hover:text-green-600 transition-colors"
               >
-                <Globe
-                  size={14}
-                  className="transition-transform hover:scale-110"
-                />
-                emeacollege.ac.in
+                <FaWhatsapp className="text-green-500" size={16} />
+                +91 99610 63747 (WhatsApp)
               </a>
+
+              <span className="text-gray-400">|</span>
+
+              <span>+91 99952 66781</span>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const Hero = () => {
           Innovating Knowledge, Connecting Ideas and Research
         </p>
         <h3 className="text-center text-xl md:text-2xl mt-2 text-[#000] font-semibold">
-          2ND LNTERDISCIPLINARY LNTERNATIONAL CONFERENCE
+       2ND LNTERDISCIPLINARY NTERNATIONAL CONFERENCE
         </h3>
         <h4 className="text-center text-md md:text-lg mt-1  font-semibold">
           <span className=" text-primary">04</span> &{" "}
@@ -78,14 +78,14 @@ const Hero = () => {
             <div className="flex-col md:flex-row flex items-center justify-between  mx-auto gap-[10px] md:gap-[26px]  max-w-[730px] w-full">
               <div className="flex flex-col sm:flex-row items-center justify-center   mx-auto gap-[10px] md:gap-[26px]  max-w-[730px] w-full">
                 <button className="rounded-lg flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-[4px] border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                  STUDENTS: Rs. 750
+                  STUDENTS: Rs. 600
                 </button>
                 <button className="rounded-lg border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                  FACULTIES: Rs. 1200
+                  FACULTIES: Rs. 900
                 </button>
               </div>
               <button className="rounded-lg col-span-2  md:col-span-2 border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                RESEARCH SCHOLARS: Rs.1000
+                RESEARCH SCHOLARS: Rs.850
               </button>
             </div>
             <div className="border  border-[#005188] px-4 py-1.5 font-semibold text-center max-w-[730px] w-full mx-auto text-sm sm:text-md">
@@ -97,7 +97,7 @@ const Hero = () => {
                 <span className="font-medium">Contact: </span>
                 <a
                   href="mailto:emerge2026@emeacollege.ac.in"
-                  className="text-primary font-semibold"
+                  className="text-primary font-semibold select-text"
                 >
                   emerge2026@emeacollege.ac.in
                 </a>
@@ -106,7 +106,7 @@ const Hero = () => {
                 <span className="font-medium">Mob: </span>
                 <a
                   href="tel:+919961063747"
-                  className="text-primary font-semibold"
+                  className="text-primary font-semibold select-text"
                 >
                  9961063747
                 </a>

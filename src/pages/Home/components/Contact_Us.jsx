@@ -22,13 +22,13 @@ const ContactUs = () => {
        chairman: {
          name: 'Dr. Krishnakumar T',
          designation: 'Professor in Computer Applications',
-         mobile: ''
+         mobile: '+91 94956 07426'
        },
        cordinator: [
          {
            name: 'Ms. Jisha PJ',
            designation: 'Associate Professor, Dept. of Microbiology',
-           mobile: ''
+           mobile: '+91 99956 30321'
          }
        ]
      },
