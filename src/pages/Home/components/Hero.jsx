@@ -26,7 +26,8 @@ const Hero = () => {
         </h2>
 
         <h3 className="text-center text-xl md:text-2xl mt-2 text-[#000] font-semibold">
-          2ND INTERDISCIPLINARY INTERNATIONAL CONFERENCE
+          {/* 2ND INTERDISCIPLINARY INTERNATIONAL CONFERENCE */}
+          2nd Interdisciplinary International Conference
         </h3>
         <p className="text-center sm:text-lg  text-[#000]">
           <span className="text-primary font-semibold">Innovation:</span>{" "}
