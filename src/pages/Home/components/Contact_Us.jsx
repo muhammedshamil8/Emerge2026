@@ -20,21 +20,16 @@ const ContactUs = () => {
      {
        title: 'Science',
        chairman: {
-         name: 'Prof. Dr. Shamsudheen E',
+         name: 'Dr. Krishnakumar T',
          designation: 'Professor in Computer Applications',
-         mobile: '+91 98460 96921'
+         mobile: ''
        },
        cordinator: [
          {
-           name: 'Mr. Yunus P',
-           designation: 'Assistant Professor in Microbiology',
-           mobile: '+91 98475 45044'
-         },
-         {
-           name: 'Dr. Rasheed Paloly',
-           designation: 'Assistant Professor in Physics',
-           mobile: '+91 94968 27267'
-         },
+           name: 'Ms. Jisha PJ',
+           designation: 'Associate Professor, Dept. of Microbiology',
+           mobile: ''
+         }
        ]
      },
      {

@@ -309,6 +309,11 @@ const Tracks = () => {
         onCancel={() => setOpen(false)}
         footer={null}
         styles={"!bg-secondary !p-0"}
+        // styles={{
+        //   maxHeight: "80vh",
+        //   overflowY: "auto",
+        //   padding: 0,
+        // }}
         mask={true}
         maskClosable={true}
         width={1000}
@@ -320,10 +325,10 @@ const Tracks = () => {
         className="!bg-secondary w-full min-h-[60%] flex items-center justify-center !-p-10 !rounded-2xl"
       >
         {ConferenceTrack ? (
-          <div className="-p-10 relative -mx-[26px] min-h-[80vh] -my-[26px] !rounded-2xl overflow-hidden h-full ">
+          <div className="-p-10 relative -mx-[26px] min-h-[80vh] -my-[26px] !rounded-2xl overflow-hidden overflow-y-auto h-full ">
             <img
               src={ConferenceTrack?.image_url_big}
-              className="absolute top-0 left-0 w-full h-full object-cover"
+              className="absolute top-0 left-0 w-full h-full object-cover "
               alt={ConferenceTrack?.title}
               onLoad={() => setImageLoadedTrack(true)}
               style={{ display: imageLoadedTrack ? "block" : "none" }}

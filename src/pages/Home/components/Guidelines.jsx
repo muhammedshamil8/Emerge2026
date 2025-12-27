@@ -24,7 +24,7 @@ const Guidelines = () => {
               <li>Presentations can be delivered both offline and online. This option can be chosen during the abstract submission.</li>
               <li>Abstracts and full papers must be submitted electronically. Only submissions sent through our online platform will be accepted.</li>
               <li>Please follow the format provided on the conference website for all submissions.</li>
-              <li>For detailed instructions regarding submission, including formatting guidelines and topics of interest, please visit our website.</li>
+              <li>For detailed instructions regarding submission, including formatting guidelines and topics of interest, Please download the PDF shared above..</li>
               <li className='font-medium'>The full paper can only be submitted after receiving acceptance of the abstract</li>
                <a href={Guidelines_for_Authors} download
           className="text-white hidden md:flex hover:bg-[#184866]  w-fit mx-auto  transition-all ease-in-out  items-center gap-2 justify-center my-3 bg-primary py-2 px-4 rounded-xl"
