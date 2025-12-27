@@ -579,7 +579,7 @@ function Index() {
                   <Table
                     columns={columns2}
                     dataSource={filteredUsers2.map((user) => ({ ...user, key: user.id }))}
-                    bordered
+                    variant="bordered"
                     loading={loading}
                     pagination={false}
                     title={() => (
@@ -660,7 +660,7 @@ function Index() {
                   <Table
                     columns={columns}
                     dataSource={users.map((user) => ({ ...user, key: user.id }))}
-                    bordered
+                    variant="bordered"
                     loading={loading}
                     scroll={scroll}
                     pagination={false}
@@ -758,7 +758,7 @@ function Index() {
                   <Table
                     columns={columsFeedback}
                     dataSource={feedback.map((user) => ({ ...user, key: user.id }))}
-                    bordered
+                    variant="bordered"
                     loading={loading}
                     scroll={scroll}
                     pagination={false}

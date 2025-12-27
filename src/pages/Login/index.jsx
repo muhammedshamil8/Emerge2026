@@ -59,7 +59,7 @@ function Auth() {
       transition={{ duration: 0.3 }}
       style={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#f0f2f5' }}
     >
-      <Card style={{ maxWidth: 400, width: '100%', padding: '20px' }} bordered>
+      <Card style={{ maxWidth: 400, width: '100%', padding: '20px' }} variant="bordered">
         <Title level={3} style={{ textAlign: 'center' }}>
           Admin Sign In
         </Title>
