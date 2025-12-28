@@ -8,7 +8,7 @@ const navLinks = [
   { name: "Home", type: "top" },
   { name: "Tracks", type: "section", id: "tracks" },
   { name: "Guidelines", type: "section", id: "guidelines" },
-  { name: "Committee", type: "route", path: "/committee" },
+  // { name: "Committee", type: "route", path: "/committee" },
 ];
 
 function scrollToSection(id) {

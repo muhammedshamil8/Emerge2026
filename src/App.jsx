@@ -31,7 +31,7 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/committee" element={<Committee />} />
+            {/* <Route path="/committee" element={<Committee />} /> */}
             <Route path='/register/abstract' element={<Abstract />} />
             <Route path='/Feedback' element={<FeedbackForm />} />
           </Route>
