@@ -107,9 +107,7 @@ const Tracks = () => {
         viewport={{ once: true }}
       >
         {/* Heading */}
-        <h6 className="font-medium">
-          Conference Theme
-        </h6>
+        <h6 className="font-medium">Conference Theme</h6>
 
         <h1 className="mt-2 text-xl md:text-3xl font-semibold text-[#005188]">
           Innovation: Research, connection, Knowledge
@@ -120,16 +118,23 @@ const Tracks = () => {
           {/* Text */}
           <div className="md:basis-2/3">
             <p className="text-gray-700 leading-relaxed sm:text-lg">
-              {/* <span className="font-semibold text-[#005188]">EMERGE 2026</span>{" "} */}
-              foregrounds how imaginative thinking, evidence-based research, and
+              EMERGE 2026 foregrounds the transformative power of innovation and
+              research in generating knowledge and fostering meaningful
+              connections across disciplines. The theme underscores the
+              importance of collaborative inquiry and intellectual exchange in
+              addressing contemporary challenges, while envisioning futures
+              shaped by informed, inclusive, and impactful knowledge production.
+            </p>
+            {/* <p className="text-gray-700 leading-relaxed sm:text-lg"> */}
+            {/* <span className="font-semibold text-[#005188]">EMERGE 2026</span>{" "} */}
+            {/* foregrounds how imaginative thinking, evidence-based research, and
               connected forms of knowledge production shape the futures we
               design and inhabit. The conference invites critical reflections
               and creative interventions on the intersections of innovation,
               research, connection, and knowledge.
-            </p>
-
+            </p> */}
             {/* Key Pillars */}
-            <ul className="mt-4 space-y-1 text-gray-700 sm:text-lg">
+            {/* <ul className="mt-4 space-y-1 text-gray-700 sm:text-lg">
               <li>
                 <span className="font-medium text-[#005188]">Innovation</span>{" "}
                 as a catalyst for technological, social, cultural, economic, and
@@ -149,7 +154,7 @@ const Tracks = () => {
                 <span className="font-medium text-[#005188]">Knowledge</span> as
                 a shared and empowering resource fostering inclusive futures.
               </li>
-            </ul>
+            </ul> */}
           </div>
 
           {/* Logo */}

@@ -29,8 +29,8 @@ function index() {
     >
     
     <Hero />
-    <div className='bg-white w-full'>
-    <div className='max-w-[1300px] mx-auto pb-14'>
+    <div className='bg-white w-full px-4'>
+    <div className='max-w-[1200px] mx-auto pb-14'>
     <Tracks />
     <WhyAttend />
     <ImportantDates />

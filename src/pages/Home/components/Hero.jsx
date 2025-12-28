@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <div className="">
-      <div className="max-w-[800px] mx-auto">
+      <div className="px-4 mx-auto">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center pt-10 text-primary">
           EMERGE 2026
         </h2>
@@ -61,42 +61,42 @@ const Hero = () => {
           </button> */}
         </div>
       </div>
-
-      <img
+      {!imageLoaded && (
+        <div className="w-full py-10 h-full min-h-[300px] opacity-50 bg-gray-300 animate-pulse"></div>
+      )}
+      <motion.img
         src={EmeaBW}
         alt="EMEACONFERENCE"
-        className={classNames("mx-auto  z-0", {
-          "opacity-100": imageLoaded,
-          "opacity-0": !imageLoaded,
-        })}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: imageLoaded ? 1 : 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         onLoad={() => setImageLoaded(true)}
+        className="mx-auto w-full h-full object-contain"
       />
 
-      <div className=" bg-[#fff]">
+      <div className="px-4 bg-[#fff]">
         {/* sport Registration */}
         <section className="-mt-[8%] relative z-10 max-w-[1000px] mx-auto px-4 py-6 ">
           <div className=" -mt-4 mx-auto p-4  bg-[#fff]  flex flex-col w-full gap-4 lg:px-10 rounded-3xl shadow-lg border">
             <h1 className="text-primary text-lg sm:text-xl md:text-3xl font-bold text-center  md:my-2 ">
               SPOT REGISTRATION
             </h1>
-            <div className="flex-col md:flex-row flex items-center justify-between  mx-auto gap-[10px] md:gap-[26px]  max-w-[730px] w-full">
-              <div className="flex flex-col sm:flex-row items-center justify-center   mx-auto gap-[10px] md:gap-[26px]  max-w-[730px] w-full">
-                <button className="rounded-lg flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-[4px] border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                  STUDENTS: Rs. 550
-                </button>
-                <button className="rounded-lg border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                  FACULTIES: Rs. 850
-                </button>
-              </div>
+            <div className="flex-col md:flex-row flex items-center justify-between  mx-auto   max-w-[730px] w-full">
+              <button className="rounded-lg flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-[4px] border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
+                STUDENTS: Rs. 550
+              </button>
+              <button className="rounded-lg border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
+                FACULTIES: Rs. 850
+              </button>
               <button className="rounded-lg col-span-2  md:col-span-2 border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
                 RESEARCH SCHOLARS: Rs. 800
               </button>
             </div>
-            <div className="border  border-[#005188] px-4 py-1.5 font-semibold text-center max-w-[730px] w-full mx-auto text-sm sm:text-md">
+            <div className="border  border-[#005188] px-4 py-1.5 mb-4 font-semibold text-center max-w-[730px] w-full mx-auto text-sm sm:text-md">
               Registration for UG and PG students on Daily Basis available:{" "}
               <span className="font-bold text-primary">Rs. 300</span> per day
             </div>
-            <div className="flex justify-between w-full items-center max-w-[730px] mx-auto">
+            {/* <div className="flex justify-between w-full items-center max-w-[730px] mx-auto">
               <div className="text-[12px] sm:text-sm select-text">
                 <span className="font-medium">Contact: </span>
                 <a
@@ -130,13 +130,13 @@ const Hero = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
         {/* About Emerge */}
-        <section className="bg-white relative z-10 max-w-[1000px] mx-auto px-4 py-6 rounded-3xl ">
-          <div className=" mx-auto p-4 flex flex-col w-full gap-4 px-10">
+        <section className="bg-white relative z-10 max-w-[1200px] mx-auto px-4 py-6 rounded-3xl ">
+          <div className=" mx-auto  flex flex-col w-full gap-4">
             <h1 className="text-primary text-2xl md:text-3xl font-semibold text-center  md:my-2 ">
               About EMERGE 2026
             </h1>
@@ -149,11 +149,11 @@ const Hero = () => {
               world through rigorous scholarship and innovative perspectives
             </p>
             <p className="text-[#333] text-md md:text-lg font-medium text-justify">
-              Organised around three broad academic tracks Humanities, Social
-              Sciences and Literature: Sciences, and Commerce and
-              Management-EMERGE 2026 encourages interdisciplinary engagement
-              that transcends traditional boundaries. The conference aims to
-              foster meaningful scholarly exchange, generate actionable
+              Organised around three broad academic tracks&mdash;Humanities,
+              Social Sciences and Literature; Sciences; and Commerce and
+              Management&mdash; EMERGE 2026 encourages interdisciplinary
+              engagement that transcends traditional boundaries. The conference
+              aims to foster meaningful scholarly exchange, generate actionable
               insights, and envision equitable, sustainable, and humane futures.
             </p>
           </div>

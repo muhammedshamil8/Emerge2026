@@ -112,7 +112,7 @@ const RegistrationForm = () => {
     const uniqueFileName = `${uuidv4()}${getFileExtension(file.name)}`;
 
     const { data: uploadData, error: uploadError } = await supabase.storage
-      .from("emerge2025")
+      .from("emerge2026")
       .upload(`${field}/${uniqueFileName}`, file.originFileObj, {
         cacheControl: "3600",
         upsert: true,
@@ -125,7 +125,7 @@ const RegistrationForm = () => {
     }
 
     const { data: url } = supabase.storage
-      .from("emerge2025")
+      .from("emerge2026")
       .getPublicUrl(`${field}/${uniqueFileName}`);
 
     // console.log(url);
@@ -204,7 +204,7 @@ const RegistrationForm = () => {
 
       // Submit the form data to Supabase
       const { data, error } = await supabase
-        .from("abstract_registeration")
+        .from("abstract_registration")
         .insert(finalData);
 
       // console.log(data);

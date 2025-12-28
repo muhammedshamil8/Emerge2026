@@ -73,15 +73,15 @@ function Index() {
   async function fetchAbstract() {
     setLoading(true);
     try {
-      const { data, error } = await supabase.from('abstract_registeration').select('*');
+      const { data, error } = await supabase.from('abstract_registration').select('*');
       if (error) throw error;
       setUsers2(data || []);
       setFilteredUsers2(data || []);
       // setTable('abstract');
       setLoading(false);
     } catch (error) {
-      console.error('Error fetching abstract_registeration:', error);
-      message.error('Failed to fetch abstract_registeration.');
+      console.error('Error fetching abstract registration:', error);
+      message.error('Failed to fetch abstract registration.');
       setLoading(false);
     }
   }
@@ -182,16 +182,7 @@ function Index() {
           <Button type='primary' onClick={() => handleView(record)}>View</Button>
         </Space>
       ),
-    },
-    {
-      title: 'Action',
-      key: 'action',
-      render: (_, record) => (
-        <Space size="middle">
-          <Button type='primary' onClick={() => handleView(record)}>View</Button>
-        </Space>
-      ),
-    },
+    }
   ];
 
   const columsFeedback = [
@@ -251,6 +242,7 @@ function Index() {
           'Department': user.department,
           'Gender': user.gender,
           'Email': user.email,
+          'Food preference': user.food_preference,
           'Phone Number': user.phone_number,
           'Address': user.address,
           'Expertise Field': user.expertise_field,
@@ -489,7 +481,7 @@ function Index() {
         <Sider trigger={null} collapsible collapsed={collapsed} style={siderStyle}>
           <div className="demo-logo-vertical" />
           <div className='flex text-white py-6 text-center justify-center font-bold '>
-            Emerge 2025
+            Emerge 2026
           </div>
           <Menu
             theme="dark"
@@ -631,6 +623,7 @@ function Index() {
                       <p><strong>Email:</strong> {selectedUser2?.email || 'N/A'}</p>
                       <p><strong>Phone Number:</strong> {selectedUser2?.phone_number || 'N/A'}</p>
                       <p><strong>Address:</strong> {selectedUser2?.address || 'N/A'}</p>
+                      
                     </div>
 
                     <Divider />
@@ -711,6 +704,7 @@ function Index() {
                       <p><strong>Email:</strong> {selectedUser?.email || 'N/A'}</p>
                       <p><strong>Phone Number:</strong> {selectedUser?.phone_number || 'N/A'}</p>
                       <p><strong>Address:</strong> {selectedUser?.address || 'N/A'}</p>
+                      <p><strong>Food preference:</strong> {selectedUser?.food_preference || 'N/A'}</p>
                     </div>
 
                     <Divider />
