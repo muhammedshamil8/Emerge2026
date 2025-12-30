@@ -111,7 +111,7 @@ export default function Footer() {
               <span className="text-gray-400">|</span>
 
                <a
-                href="https://wa.me/9995266781"
+                href="https://wa.me/919995266781"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 hover:text-green-600 transition-colors"
