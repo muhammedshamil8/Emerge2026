@@ -160,7 +160,7 @@ const Hero = () => {
       </motion.div>
       <div className="px-4 ">
         {/* sport Registration */}
-        <section className="-mt-[6%] relative z-10 max-w-[1000px] mx-auto px-4 py-6 ">
+        <section className="-mt-[6%] lg:-mt-[3%] relative z-10 max-w-[1000px] mx-auto px-4 py-6 ">
           <div className=" -mt-4 mx-auto p-4  bg-[#fff]  flex flex-col w-full gap-4 lg:px-10 rounded-3xl shadow-lg border">
             <h1 className="text-primary text-lg sm:text-xl md:text-3xl font-bold text-center  md:my-2 ">
               SPOT REGISTRATION
