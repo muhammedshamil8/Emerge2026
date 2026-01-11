@@ -1,10 +1,16 @@
-import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useState ,useEffect } from "react";
 import classNames from "classnames";
 import { Download } from "lucide-react";
 import EmeaBW from "@/assets/images/emea_bg.png";
 import { useNavigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.96 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -17,10 +23,50 @@ const Hero = () => {
     document.body.removeChild(link);
   };
   const navigate = useNavigate();
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const eventDate = new Date("February 4, 2026 09:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const difference = eventDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const valuesArray = () => {
+    const { days, hours, minutes, seconds } = timeLeft;
+    return [days, hours, minutes, seconds];
+  };
 
   return (
     <div className="">
-      <div className="px-4 mx-auto">
+      <div className="px-4 mx-auto ">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center pt-10 text-primary">
           EMERGE 2026
         </h2>
@@ -71,12 +117,50 @@ const Hero = () => {
         animate={{ opacity: imageLoaded ? 1 : 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         onLoad={() => setImageLoaded(true)}
-        className="mx-auto w-full h-full object-contain"
+        className="mx-auto w-full h-full object-contain "
       />
+      <motion.div
+        variants={scaleIn}
+        className="flex items-center justify-center relative z-20 -mt-[6%] mb-10 px-4"
+      >
+        <motion.div
+          className="grid grid-cols-4 bg-white shadow-lg shadow-blue-50 rounded-3xl"
+          layout
+        >
+          {["DAYS", "HRS", "MIN", "SEC"].map((text, i) => {
+            const value = valuesArray()[i];
+            const padded = String(value).padStart(2, "0");
+            return (
+              <div
+                key={i}
+                className={`px-4 sm:px-8 py-6 text-center ${
+                  i !== 0 ? "border-l border-gray-100" : ""
+                }`}
+              >
+                <AnimatePresence mode="wait">
+                  <motion.p
+                    key={padded}
+                    initial={{ opacity: 0, y: -12, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 12, scale: 0.98 }}
+                    transition={{ duration: 0.28, ease: "easeOut" }}
+                    className="text-2xl md:text-4xl text-[#005AAB] font-mono tabular-nums w-12 mx-auto text-center font-black"
+                  >
+                    {padded}
+                  </motion.p>
+                </AnimatePresence>
 
-      <div className="px-4 bg-[#fff]">
+                <p className="text-xs font-semibold tracking-wider text-[#005AAB] mt-1">
+                  {text}
+                </p>
+              </div>
+            );
+          })}
+        </motion.div>
+      </motion.div>
+      <div className="px-4 ">
         {/* sport Registration */}
-        <section className="-mt-[8%] relative z-10 max-w-[1000px] mx-auto px-4 py-6 ">
+        <section className="-mt-[6%] relative z-10 max-w-[1000px] mx-auto px-4 py-6 ">
           <div className=" -mt-4 mx-auto p-4  bg-[#fff]  flex flex-col w-full gap-4 lg:px-10 rounded-3xl shadow-lg border">
             <h1 className="text-primary text-lg sm:text-xl md:text-3xl font-bold text-center  md:my-2 ">
               SPOT REGISTRATION
@@ -135,7 +219,7 @@ const Hero = () => {
         </section>
 
         {/* About Emerge */}
-        <section className="bg-white relative z-10 max-w-[1200px] mx-auto px-4 py-6 rounded-3xl ">
+        <section className="bg-white mb-8 relative z-10 max-w-[1200px] mx-auto px-4 py-6 rounded-3xl ">
           <div className=" mx-auto  flex flex-col w-full gap-4">
             <h1 className="text-primary text-2xl md:text-3xl font-semibold text-center  md:my-2 ">
               About EMERGE 2026

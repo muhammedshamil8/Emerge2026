@@ -121,45 +121,44 @@ function index() {
     label: "Advisory Board:",
     persons: [
       {
-        name: "Prof. Dr. P. Raveendran",
-        designation: "Vice chancellor, University of Calicut, India",
-      },
-      {
-        name: "Prof. Dr. Piotr Szweda",
+        name: "Prof.(Dr.) Andi Asrifan",
         designation:
-          "Professor, Department of Pharmaceutical Technology and Biochemistry, Gdańsk University of Technology, Poland",
+          "Professor of English Education, Universitas Negeri Makassar, Indonesia.",
       },
       {
-        name: "Prof. Dr. Satheesh C. Raghavan",
+        name: "Prof.(Dr.) Asheref  Illiyan",
         designation:
-          "Professor, Department of Biochemistry, Indian Institute of Science (IISc) Banglore, India",
+          "Professor and Head, Department of Economics , Jamia Millia Islamia , Central University, New Delhi, India",
       },
+
       {
-        name: "Prof. Dr. Mohammed Basheer K",
-        designation: "Former Vice chancellor, University of Calicut, India",
-      },
-      {
-        name: "Prof. Dr. M. Nasser",
-        designation: "Former Pro-Vice chancellor, University of Calicut, India",
-      },
-      {
-        name: "Prof. Dr. Surendra Prasad",
-        designation: "Head SAGEONS, University of the South Pacific, Fiji",
-      },
-      {
-        name: "Prof. Dr. Asheref Illyan",
+        name: "Prof.(Dr.)Rajendra Pilankatta",
         designation:
-          "Head, Department of Economics, Jamia Millia Islamia, India",
+          "Dept of Biochemistry and Molecular Biology, Dean Students’ Welfare, Central University of Kerala , Kasaragod, Kerala.",
       },
       {
-        name: "Prof. Dr. Krishnan Chalil",
+        name: "Prof.(Dr.)Raju. G",
         designation:
-          "Head, Department of Economic Studies and Policy, Central University of South Bihar, India",
+          "Dean, Computer Science and Engineering, Sahrdaya College of Engineering and Technology, Thrissur, Kerala.",
       },
       {
-        name: "Dr. Safna Hussan K. P",
+        name: "Prof.(Dr.)Arun A Rauf",
         designation:
-          "Scientist, Micro/Nano Technology Center, Tokai University, Tokyo, Japan",
+          "Professor and Head, Department of Biochemistry, University of Kerala, Thiruvananthapuram",
+      },
+      {
+        name: "Dr. Sinu P John",
+        designation:
+          "Adjunct Associate Professor, Department of Biochemistry, Georgetown University, Washington DC, USA",
+      },
+      {
+        name: "Dr. Girish K Radhakrishnan",
+        designation:
+          "Scientist-F, BRIC-National Institute of Animal Biotechnology, Hyderabad.",
+      },
+      {
+        name: "Mr. Abdul Haseen Kinadiyil",
+        designation: "Technical Solutions Consultant, Google Cloud, Texas, USA",
       },
     ],
   };
@@ -213,7 +212,7 @@ function index() {
         </motion.div>
       </section>
 
-      {/* <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-4">
+      <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-4">
         Advisory Board
       </h1>
       <section className="bg-secondary rounded-xl shadow-full-side mx-auto max-w-[800px] p-6 ">
@@ -234,7 +233,7 @@ function index() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
     </motion.div>
   );
 }
