@@ -288,7 +288,7 @@ const Tracks = () => {
               />
 
               <div className="absolute rounded-lg bottom-0 w-full flex justify-between text-white flex-col items-center pb-4">
-                <p className="text-sm font-semibold p-2 max-w-[80%] rounded-lg">
+                <p className="text-sm font-semibold p-2 max-w-[80%] rounded-lg text-center">
                   {item.title}
                 </p>
 
