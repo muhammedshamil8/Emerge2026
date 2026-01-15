@@ -218,7 +218,7 @@ function index() {
       <section className="bg-secondary rounded-xl shadow-full-side mx-auto max-w-[800px] p-6 ">
         <div className="flex flex-col gap-3 mb-5">
           <div className="right-slope-card relative bg-primary text-white text-md sm:text-lg font-semibold w-fit pl-3 py-[2px] pr-6 min-w-[100px] rounded-md  capitalize">
-            {committee2.label}:
+            {committee2.label}
             <span className="absolute before:content-[''] box-shadow-lgreen right-[2px] bottom-[0px]  w-[10px] h-[10px]    rounded-full z-10" />
             <span className="absolute before:content-[''] box-shadow-lgreen2 right-[13px] top-[0px]  w-[10px] h-[10px]   rounded-full z-10" />
           </div>
