@@ -8,7 +8,7 @@ const navLinks = [
   { name: "Home", type: "top" },
   { name: "Tracks", type: "section", id: "tracks" },
   { name: "Guidelines", type: "section", id: "guidelines" },
-  // { name: "Committee", type: "route", path: "/committee" },
+  { name: "Committee", type: "route", path: "/committee" },
 ];
 
 function scrollToSection(id) {
@@ -75,38 +75,35 @@ export default function Header() {
         </Link>
 
         {/* ================= DESKTOP NAV ================= */}
-      <nav className="relative hidden md:flex items-center gap-8">
-  {navLinks.map((link) => {
-    const isActive =
-      link.type === "route"
-        ? location.pathname === link.path
-        : false;
+        <nav className="relative hidden md:flex items-center gap-8">
+          {navLinks.map((link) => {
+            const isActive =
+              link.type === "route" ? location.pathname === link.path : false;
 
-    return (
-      <button
-        key={link.name}
-        onClick={() => handleNavClick(link)}
-        onMouseEnter={() => setHovered(link.name)}
-        onMouseLeave={() => setHovered(null)}
-        className={`relative text-sm font-medium transition-colors ${
-          isActive
-            ? "text-[#005188]"
-            : "text-gray-700 hover:text-[#005188]"
-        }`}
-      >
-        {link.name}
+            return (
+              <button
+                key={link.name}
+                onClick={() => handleNavClick(link)}
+                onMouseEnter={() => setHovered(link.name)}
+                onMouseLeave={() => setHovered(null)}
+                className={`relative text-sm font-medium transition-colors ${
+                  isActive
+                    ? "text-[#005188]"
+                    : "text-gray-700 hover:text-[#005188]"
+                }`}
+              >
+                {link.name}
 
-        {(hovered === link.name || isActive) && (
-          <motion.span
-            layoutId="nav-underline"
-            className="absolute left-0 -bottom-1 h-[2px] w-full bg-[#005188]"
-          />
-        )}
-      </button>
-    );
-  })}
-</nav>
-
+                {(hovered === link.name || isActive) && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute left-0 -bottom-1 h-[2px] w-full bg-[#005188]"
+                  />
+                )}
+              </button>
+            );
+          })}
+        </nav>
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
@@ -163,29 +160,28 @@ export default function Header() {
               </div>
 
               {/* Links */}
-          <nav className="flex flex-col p-4 gap-4">
-  {navLinks.map((link) => (
-    <button
-      key={link.name}
-      onClick={() => {
-        setOpen(false);
-        handleNavClick(link);
-      }}
-      className="text-sm font-medium text-left text-gray-700"
-    >
-      {link.name}
-    </button>
-  ))}
+              <nav className="flex flex-col p-4 gap-4">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.name}
+                    onClick={() => {
+                      setOpen(false);
+                      handleNavClick(link);
+                    }}
+                    className="text-sm font-medium text-left text-gray-700"
+                  >
+                    {link.name}
+                  </button>
+                ))}
 
-  <Link
-    to="/register"
-    onClick={() => setOpen(false)}
-    className="mt-4 text-center bg-[#005188] text-white py-2 rounded-md"
-  >
-    Register Now
-  </Link>
-</nav>
-
+                <Link
+                  to="/register"
+                  onClick={() => setOpen(false)}
+                  className="mt-4 text-center bg-[#005188] text-white py-2 rounded-md"
+                >
+                  Register Now
+                </Link>
+              </nav>
             </motion.div>
           </>
         )}

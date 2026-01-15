@@ -181,7 +181,7 @@ function index() {
       transition={{ duration: 0.3 }}
       className="bg-white p-4 pb-14"
     >
-      <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-4 pt-6">
+      {/* <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-4 pt-6">
         Organizing Committee
       </h1>
       <section className="bg-secondary rounded-xl shadow-full-side mx-auto max-w-[800px] p-6 mb-20">
@@ -210,7 +210,7 @@ function index() {
             </div>
           ))}
         </motion.div>
-      </section>
+      </section> */}
 
       <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-4">
         Advisory Board
