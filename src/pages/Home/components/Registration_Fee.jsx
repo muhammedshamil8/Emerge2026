@@ -77,9 +77,9 @@ const RegistrationFee = () => {
                   <th className="border border-black px-1 sm:px-4 py-2 md:py-3">
                     Presentation & ISBN Publication
                   </th>
-                  <th className="border border-black px-1 sm:px-4 py-2 md:py-3">
+                  {/* <th className="border border-black px-1 sm:px-4 py-2 md:py-3">
                     Presentation & ISSN Peer reviewed Journal Publication
-                  </th>
+                  </th> */}
                 </tr>
               </thead>
               <tbody>
@@ -97,9 +97,9 @@ const RegistrationFee = () => {
                     <td className="border border-black px-1 sm:px-4 py-2 font-semibold ">
                       {row.publication}
                     </td>
-                    <td className="border border-black px-1 sm:px-4 py-2 font-semibold ">
+                    {/* <td className="border border-black px-1 sm:px-4 py-2 font-semibold ">
                       {row.Journal_publication}
-                    </td>
+                    </td> */}
                   </tr>
                 ))}
               </tbody>
