@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 
 const dates = [
   {
-    date: "January 15, 2026",
+    date: "January 20, 2026",
     title: "Last Date of Abstract Submission",
   },
   {
-    date: "January 22, 2026",
+    date: "January 27, 2026",
     title: "Notification to all Authors",
   },
   {
-    date: "January 24, 2026",
+    date: "January 29, 2026",
     title: "Last Date of Registration",
   },
   {
-    date: "January 27, 2026",
+    date: "February 1, 2026",
     title: "Camera-Ready Paper Submission",
   },
 ];

@@ -657,6 +657,10 @@ const RegistrationForm = () => {
     navigate(path);
   };
 
+  const handleWhatsappJoin = () => {
+    window.open("https://chat.whatsapp.com/KFvYk1b0YJH3fYpYJ1R6nY", "_blank");
+  };
+
   return (
     <motion.div
       key={location.pathname}
@@ -751,7 +755,9 @@ const RegistrationForm = () => {
                   >
                     Go To Home
                   </Button>
-                  {/* <Button onClick={handleRegisterAgain} size='large' className='w-full max-w-[180px]'>Register Again</Button> */}
+                  {/* <Button onClick={handleWhatsappJoin} size='large' className='w-full max-w-[180px]'>
+                    Join the Whatsapp Group
+                  </Button> */}
                 </div>,
               ]}
             />
