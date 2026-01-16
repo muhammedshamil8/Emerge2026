@@ -729,40 +729,40 @@ const RegistrationForm = () => {
           </>
         )}
         {/* success show */}
-        <div
-          style={{
-            transition: "opacity 0.5s ease",
-            opacity: submitted ? 1 : 0,
-          }}
-          className="bg-white shadow-lg py-4 sm:py-10 rounded-xl select-none"
-        >
-          {submitted && (
+        {submitted && (
+          <div className="bg-white shadow-lg py-4 sm:py-10 rounded-xl select-none">
             <Result
               status="success"
-              title="Abstract Submission Successfull"
+              title="Abstract Submission Successful"
               subTitle="Your registration has been submitted successfully. We will get back to you soon."
               extra={[
                 <div
-                  className="flex mx-auto items-center justify-center gap-6 flex-wrap"
-                  key={1}
+                  className="flex mx-auto items-center justify-center gap-6 flex-wrap flex-col"
+                  key="actions"
                 >
                   <Button
                     type="primary"
-                    key="console"
                     size="large"
                     className="w-full max-w-[180px]"
                     onClick={() => handleNavigate("/")}
                   >
                     Go To Home
                   </Button>
-                  {/* <Button onClick={handleWhatsappJoin} size='large' className='w-full max-w-[180px]'>
-                    Join the Whatsapp Group
-                  </Button> */}
+                  <div className="text-center flex flex-col gap-1 items-center justify-center ">
+                  <p className="text-gray-500 font-semibold">Join EMERGE2026 WhatsApp group</p>
+                  <Button
+                    onClick={handleWhatsappJoin}
+                    size="large"
+                    className="w-full max-w-fit bg-green-500 text-white hover:bg-green-600"
+                  >
+                    Join WhatsApp Group
+                  </Button>
+                  </div>
                 </div>,
               ]}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </motion.div>
   );

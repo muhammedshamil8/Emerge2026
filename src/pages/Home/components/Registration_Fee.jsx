@@ -109,7 +109,7 @@ const RegistrationFee = () => {
             <ul className="text-left list-disc list-outside pl-6 ">
               <li>
                 Registration for UG and PG students is available daily at a fee
-                of Rs. 300
+                of Rs. 200
               </li>
               <li>
                 The publication charge for selected papers in UGC-listed

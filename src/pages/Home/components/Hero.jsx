@@ -178,7 +178,7 @@ const Hero = () => {
             </div>
             <div className="border  border-[#005188] px-4 py-1.5 mb-4 font-semibold text-center max-w-[730px] w-full mx-auto text-sm sm:text-md">
               Registration for UG and PG students on Daily Basis available:{" "}
-              <span className="font-bold text-primary">Rs. 300</span> per day
+              <span className="font-bold text-primary">Rs. 200</span> per day
             </div>
             {/* <div className="flex justify-between w-full items-center max-w-[730px] mx-auto">
               <div className="text-[12px] sm:text-sm select-text">

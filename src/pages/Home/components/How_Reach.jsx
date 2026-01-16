@@ -25,6 +25,7 @@ const HowToReach = () => {
       description: ' The college is 6 km from the University of Calicut and 32 km from Calicut City',
     }
   ];
+  
   return (
     <div className="">
     {/* How to Reach */}
