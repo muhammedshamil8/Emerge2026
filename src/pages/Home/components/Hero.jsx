@@ -170,10 +170,10 @@ const Hero = () => {
                 STUDENTS: Rs. 350
               </button>
               <button className="rounded-lg border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                FACULTIES: Rs. 550
+                FACULTIES: Rs. 650
               </button>
               <button className="rounded-lg col-span-2  md:col-span-2 border-[4px] flex items-center justify-center flex-nowrap text-nowrap whitespace-nowrap border-white shadow-lg bg-primary text-white font-semibold text-sm sm:text-md px-5 py-2">
-                RESEARCH SCHOLARS: Rs. 650
+                RESEARCH SCHOLARS: Rs. 550
               </button>
             </div>
             <div className="border  border-[#005188] px-4 py-1.5 mb-4 font-semibold text-center max-w-[730px] w-full mx-auto text-sm sm:text-md">
