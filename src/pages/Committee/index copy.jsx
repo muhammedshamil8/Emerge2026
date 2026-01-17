@@ -2,65 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function index() {
-  const streamwiseCommittee = {
-    label: "Streamwise Committee",
-    streams: [
-      {
-        stream: "Science",
-        chairperson: "Dr. Krishnakumar K",
-        coordinator: "Ms. Jisha P. J",
-        phone: "+91 99956 30321",
-      },
-      {
-        stream: "Arts",
-        chairperson: "Mr. Roy P P",
-        coordinator: "Dr. Hussain K",
-      },
-      {
-        stream: "Commerce and Management",
-        chairperson: "Dr. Kamalam Edathil",
-        coordinator: "Dr. Aboobacker Sidique",
-      },
-    ],
-  };
-
-  const streamwiseReviewCommittee = {
-    label: "Streamwise Review Committee",
-    streams: [
-      {
-        stream: "Science",
-        members: [
-          "Dr. Haulath K",
-          "Dr. Mashhoor K",
-          "Dr. Ramsiya M",
-          "Dr. Rasiya K T",
-        ],
-        phones: ["+91 99952 66781", "+91 99610 63747"],
-      },
-      {
-        stream: "Arts",
-        members: [
-          "Dr. Firoz K T",
-          "Dr. Nisar U",
-          "Dr. Asharaf P",
-          "Dr. Saleel Ahammed A K",
-        ],
-        phones: ["+91 95440 99080", "+91 70124 23728"],
-      },
-      {
-        stream: "Commerce and Management",
-        members: [
-          "Dr. Jaseena",
-          "Dr. Aneesath M",
-          "Dr. Amla K",
-          "Dr. Juwairya P P",
-        ],
-        phones: ["9633160071", "+91 74031 14554"],
-      },
-    ],
-  };
-
-  const OrganizingCommittee = [
+  const committee1 = [
     // {
     //   label: "Chief Patron",
     //   persons: [
@@ -173,7 +115,7 @@ function index() {
     },
   ];
 
-  const AdvisoryBoard = {
+  const committee2 = {
     label: "Advisory Board:",
     persons: [
       {
@@ -246,7 +188,7 @@ function index() {
           initial="hidden"
           animate="show"
         >
-          {OrganizingCommittee.map((item, index) => (
+          {committee1.map((item, index) => (
             <div className="flex flex-col gap-3 mb-5" key={index}>
               <div className="right-slope-card relative bg-primary text-white text-md sm:text-lg font-semibold w-fit pl-3 py-[2px] pr-6 min-w-[100px] rounded-md  capitalize">
                 <span className="absolute before:content-[''] box-shadow-lgreen right-[2px] bottom-[0px]  w-[10px] h-[10px]    rounded-full z-10" />
@@ -274,12 +216,12 @@ function index() {
       <section className="bg-secondary rounded-xl shadow-full-side mx-auto max-w-[800px] p-6 ">
         <div className="flex flex-col gap-3 mb-5">
           <div className="right-slope-card relative bg-primary text-white text-md sm:text-lg font-semibold w-fit pl-3 py-[2px] pr-6 min-w-[100px] rounded-md  capitalize">
-            {AdvisoryBoard.label}
+            {committee2.label}
             <span className="absolute before:content-[''] box-shadow-lgreen right-[2px] bottom-[0px]  w-[10px] h-[10px]    rounded-full z-10" />
             <span className="absolute before:content-[''] box-shadow-lgreen2 right-[13px] top-[0px]  w-[10px] h-[10px]   rounded-full z-10" />
           </div>
           <div className="pl-8 flex flex-col gap-1">
-            {AdvisoryBoard.persons.map((person, index) => (
+            {committee2.persons.map((person, index) => (
               <div className="flex flex-col" key={index}>
                 <h1 className="sm:text-lg font-semibold leading-5">
                   {person.name}
@@ -289,87 +231,6 @@ function index() {
             ))}
           </div>
         </div>
-      </section>
-
-      <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-6">
-        {streamwiseCommittee.label}
-      </h1>
-
-      <section className="bg-secondary rounded-xl shadow-full-side mx-auto max-w-[800px] p-6 mb-20">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-        >
-          {streamwiseCommittee.streams.map((item, index) => (
-            <div className="flex flex-col gap-3 mb-5" key={index}>
-              {/* Stream title */}
-              <div className="right-slope-card relative bg-primary text-white text-md sm:text-lg font-semibold w-fit pl-3 py-[2px] pr-6 min-w-[100px] rounded-md capitalize">
-                <span className="absolute before:content-[''] box-shadow-lgreen right-[2px] bottom-[0px] w-[10px] h-[10px] rounded-full z-10" />
-                <span className="absolute before:content-[''] box-shadow-lgreen2 right-[13px] top-[0px] w-[10px] h-[10px] rounded-full z-10" />
-                {item.stream}
-              </div>
-
-              {/* Stream details */}
-              <div className="pl-8 flex flex-col gap-1">
-                <p className="sm:text-lg font-semibold leading-5">
-                  <strong>Chairperson:</strong> {item.chairperson}
-                </p>
-                <p>
-                  <strong>Coordinator:</strong> {item.coordinator}
-                </p>
-                {item.phone && (
-                  <p>
-                    <strong>Contact:</strong> {item.phone}
-                  </p>
-                )}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-      </section>
-
-      <h1 className="capitalize font-semibold text-xl sm:text-2xl text-center my-6">
-        {streamwiseReviewCommittee.label}
-      </h1>
-
-      <section className="bg-secondary rounded-xl shadow-full-side mx-auto max-w-[800px] p-6 mb-20">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-        >
-          {streamwiseReviewCommittee.streams.map((stream, index) => (
-            <div className="flex flex-col gap-3 mb-6" key={index}>
-              {/* Stream title */}
-              <div className="right-slope-card relative bg-primary text-white text-md sm:text-lg font-semibold w-fit pl-3 py-[2px] pr-6 min-w-[100px] rounded-md capitalize">
-                <span className="absolute before:content-[''] box-shadow-lgreen right-[2px] bottom-[0px] w-[10px] h-[10px] rounded-full z-10" />
-                <span className="absolute before:content-[''] box-shadow-lgreen2 right-[13px] top-[0px] w-[10px] h-[10px] rounded-full z-10" />
-                {stream.stream}
-              </div>
-
-              {/* Members */}
-              <div className="pl-8 flex flex-col gap-1">
-                {stream.members.map((member, idx) => (
-                  <p key={idx} className="sm:text-lg font-semibold leading-5">
-                    {idx + 1}. {member}
-                  </p>
-                ))}
-
-                {/* Contact numbers */}
-                {stream.phones && (
-                  <div className="mt-2 text-sm flex flex-col gap-1">
-                    {stream.phones.map((phone, idx) => (
-                      <p key={idx}>
-                        <strong>Contact:</strong> {phone}
-                      </p>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </section>
     </motion.div>
   );
