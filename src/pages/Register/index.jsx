@@ -54,7 +54,7 @@ const RegistrationForm = () => {
     experience_years: "",
     participation_type: "",
     accommodation_required: false,
-    stay_dates: "",
+    stay_dates: [],
     special_requests: null,
     arrival_info: "",
     registration_category: "",
@@ -84,7 +84,7 @@ const RegistrationForm = () => {
       experience_years: "",
       participation_type: "",
       accommodation_required: false,
-      stay_dates: "",
+      stay_dates: [],
       special_requests: null,
       arrival_info: "",
       registration_category: "",
@@ -117,20 +117,20 @@ const RegistrationForm = () => {
   };
 
   const handleDateChange = (dates) => {
-    // Check if dates is an array and handle the start and end dates
     if (dates && dates.length === 2) {
       const [startDate, endDate] = dates;
-      setFormData((prevData) => ({
-        ...prevData,
+
+      setFormData((prev) => ({
+        ...prev,
         stay_dates: [
-          startDate ? startDate.format("YYYY-MM-DD") : "",
-          endDate ? endDate.format("YYYY-MM-DD") : "",
+          startDate.format("YYYY-MM-DD"),
+          endDate.format("YYYY-MM-DD"),
         ],
       }));
     } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        stay_dates: ["", ""],
+      setFormData((prev) => ({
+        ...prev,
+        stay_dates: [],
       }));
     }
   };
@@ -207,7 +207,10 @@ const RegistrationForm = () => {
       message.warning(
         "Please fill all the conference participation required fields"
       );
-    } else if (formData.accommodation_required && formData.stay_dates === "") {
+    } else if (
+      formData.accommodation_required &&
+      formData.stay_dates.length !== 2
+    ) {
       // Accommodation & Travel
       message.warning(
         "Please fill all the accommodation & travel required fields"
