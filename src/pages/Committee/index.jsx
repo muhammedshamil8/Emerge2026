@@ -312,15 +312,16 @@ function index() {
 
               {/* Stream details */}
               <div className="pl-8 flex flex-col gap-1">
-                <p className="sm:text-lg font-semibold leading-5">
-                  <strong>Chairperson:</strong> {item.chairperson}
+                <p className="sm:text-lg font-semibold">
+                  Chairperson: {item.chairperson}
                 </p>
-                <p>
-                  <strong>Coordinator:</strong> {item.coordinator}
+                <p className="sm:text-base font-medium">
+                  Coordinator: {item.coordinator}
                 </p>
+
                 {item.phone && (
-                  <p>
-                    <strong>Contact:</strong> {item.phone}
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    Contact: {item.phone}
                   </p>
                 )}
               </div>
@@ -351,8 +352,8 @@ function index() {
               {/* Members */}
               <div className="pl-8 flex flex-col gap-1">
                 {stream.members.map((member, idx) => (
-                  <p key={idx} className="sm:text-lg font-semibold leading-5">
-                    {idx + 1}. {member}
+                  <p className="sm:text-lg font-medium">
+                     {member}
                   </p>
                 ))}
 
