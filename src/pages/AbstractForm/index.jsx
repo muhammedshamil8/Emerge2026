@@ -197,10 +197,6 @@ const RegistrationForm = () => {
       // Add URLs to formData
       const finalData = {
         ...formData,
-        experience_years:
-          formData.experience_years === ""
-            ? null
-            : Number(formData.experience_years),
         abstract_file: abstractURL,
       };
 
