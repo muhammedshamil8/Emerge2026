@@ -728,6 +728,7 @@ const RegistrationForm = () => {
                     Submit
                   </Button>
                 )}
+                
                 <div className="flex items-center w-full justify-center mt-5">
                   <p className="text-sm text-gray-500 mt-4 max-w-md text-center">
                     If you face any issues while submitting the form, please

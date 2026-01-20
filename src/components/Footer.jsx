@@ -1,6 +1,7 @@
 import { Mail, Globe } from "lucide-react";
 import { EMERGELOGO2 } from "@/assets/logo";
 import { FaWhatsapp } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function scrollToSection(id) {
   const el = document.getElementById(id);
@@ -14,11 +15,12 @@ function scrollToTop() {
 }
 
 export default function Footer() {
+  const navigate  = useNavigate();
   const footerLinks = [
     { name: "Home", type: "top" },
     { name: "Tracks", type: "section", id: "tracks" },
     { name: "Guidelines", type: "section", id: "guidelines" },
-    { name: "Contact Us", type: "route", path: "/contact" },
+    { name: "Committee", type: "route", path: "/committee" },
   ];
 
   const handleNavClick = (link) => {

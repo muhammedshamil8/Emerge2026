@@ -200,21 +200,24 @@ const RegistrationForm = () => {
     ) {
       // Professional Details
       message.warning(
-        "Please fill all the professional details required fields"
+        "Please fill all the professional details required fields",
       );
+      return;
     } else if (formData.participation_type === "") {
       // Conference Participation
       message.warning(
-        "Please fill all the conference participation required fields"
+        "Please fill all the conference participation required fields",
       );
+      return;
     } else if (
       formData.accommodation_required &&
       formData.stay_dates.length !== 2
     ) {
       // Accommodation & Travel
       message.warning(
-        "Please fill all the accommodation & travel required fields"
+        "Please fill all the accommodation & travel required fields",
       );
+      return;
     } else if (
       formData.registration_category === "" ||
       formData.payment_mode === "" ||
@@ -223,8 +226,9 @@ const RegistrationForm = () => {
     ) {
       // Payment Information
       message.warning(
-        "Please fill all the payment information required fields"
+        "Please fill all the payment information required fields",
       );
+      return;
     }
 
     setLoading(true);
@@ -234,7 +238,7 @@ const RegistrationForm = () => {
       const receiptURL = formData.transaction_receipt
         ? await handleFileUpload(
             formData.transaction_receipt,
-            "transaction_receipt"
+            "transaction_receipt",
           )
         : null;
       const specialRequestURL = formData.special_requests
@@ -606,7 +610,14 @@ const RegistrationForm = () => {
               </div>
             </Form.Item>
             {formData.accommodation_required && (
-              <Form.Item label="Dates of Stay" size="large" name="stay_dates">
+              <Form.Item label="Dates of Stay" size="large" name="stay_dates"
+                rules={[
+                {
+                  required: formData.accommodation_required,
+                  message: "Please select your dates of stay!",
+                },
+              ]}
+              >
                 <DatePicker.RangePicker
                   size="large"
                   className="w-full"
@@ -656,14 +667,14 @@ const RegistrationForm = () => {
 
                     if (!isValidFileType) {
                       message.error(
-                        "Only images, PDF, or Word files are allowed!"
+                        "Only images, PDF, or Word files are allowed!",
                       );
                       return Upload.LIST_IGNORE;
                     }
 
                     if (isFileTooLarge) {
                       message.error(
-                        "File is too large! Please upload a file smaller than 2MB."
+                        "File is too large! Please upload a file smaller than 2MB.",
                       );
                       return Upload.LIST_IGNORE;
                     }
@@ -860,14 +871,14 @@ const RegistrationForm = () => {
 
                   if (!(isValidImage || isValidPdf)) {
                     message.error(
-                      "Only images (JPEG, PNG, GIF) or PDFs are allowed!"
+                      "Only images (JPEG, PNG, GIF) or PDFs are allowed!",
                     );
                     return Upload.LIST_IGNORE;
                   }
 
                   if (isFileTooLarge) {
                     message.error(
-                      "File is too large! Please upload a file smaller than 2MB."
+                      "File is too large! Please upload a file smaller than 2MB.",
                     );
                     return Upload.LIST_IGNORE;
                   }
