@@ -156,12 +156,12 @@ const RegistrationForm = () => {
     ) {
       // Professional Details
       message.warning(
-        "Please fill all the professional details required fields"
+        "Please fill all the professional details required fields",
       );
     } else if (formData.participation_type === "") {
       // Conference Participation
       message.warning(
-        "Please fill all the conference participation required fields"
+        "Please fill all the conference participation required fields",
       );
     } else if (formData.paper_title === "" || formData.abstract_file === null) {
       // Paper Submission
@@ -197,6 +197,10 @@ const RegistrationForm = () => {
       // Add URLs to formData
       const finalData = {
         ...formData,
+        experience_years:
+          formData.experience_years === ""
+            ? null
+            : Number(formData.experience_years),
         abstract_file: abstractURL,
       };
 
@@ -587,7 +591,7 @@ const RegistrationForm = () => {
 
                     if (isFileTooLarge) {
                       message.error(
-                        "File is too large! Please upload a file smaller than 2MB."
+                        "File is too large! Please upload a file smaller than 2MB.",
                       );
                       return Upload.LIST_IGNORE;
                     }
@@ -670,7 +674,7 @@ const RegistrationForm = () => {
       transition={{ duration: 0.3 }}
       className="p-6 md:p-10 bg-white "
     >
-      <div className="max-w-[1100px] mx-auto mb-6">
+      <div className="max-w-[1100px] mx-auto ">
         {!submitted && (
           <>
             <h1 className="text-center text-2xl font-semibold mb-10">
@@ -688,7 +692,7 @@ const RegistrationForm = () => {
               ))}
             </Steps>
 
-            <div className="p-2 sm:p-6 mt-6 md:mt-10">
+            <div className="p-2 sm:p-6 mt-6 md:mt-8">
               {steps[current].content}
 
               <div style={{ marginTop: 24 }}>
@@ -724,6 +728,21 @@ const RegistrationForm = () => {
                     Submit
                   </Button>
                 )}
+                <div className="flex items-center w-full justify-center mt-5">
+                  <p className="text-sm text-gray-500 mt-4 max-w-md text-center">
+                    If you face any issues while submitting the form, please
+                    contact the website handler on&nbsp;
+                    <a
+                      href="https://wa.me/918089465673"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:underline font-medium"
+                    >
+                      WhatsApp (+91 80894 65673)
+                    </a>
+                    &nbsp;and share a screenshot of the issue.
+                  </p>
+                </div>
               </div>
             </div>
           </>
@@ -749,14 +768,16 @@ const RegistrationForm = () => {
                     Go To Home
                   </Button>
                   <div className="text-center flex flex-col gap-1 items-center justify-center ">
-                  <p className="text-gray-500 font-semibold">Join EMERGE2026 WhatsApp group</p>
-                  <Button
-                    onClick={handleWhatsappJoin}
-                    size="large"
-                    className="w-full max-w-fit bg-green-500 text-white hover:bg-green-600"
-                  >
-                    Join WhatsApp Group
-                  </Button>
+                    <p className="text-gray-500 font-semibold">
+                      Join EMERGE2026 WhatsApp group
+                    </p>
+                    <Button
+                      onClick={handleWhatsappJoin}
+                      size="large"
+                      className="w-full max-w-fit bg-green-500 text-white hover:bg-green-600"
+                    >
+                      Join WhatsApp Group
+                    </Button>
                   </div>
                 </div>,
               ]}

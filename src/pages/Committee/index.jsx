@@ -353,6 +353,7 @@ function index() {
               <div className="pl-8 flex flex-col gap-1">
                 {stream.members.map((member, idx) => (
                   <p className="sm:text-lg font-medium">
+                    {/* {idx + 1}. */}
                      {member}
                   </p>
                 ))}
