@@ -81,7 +81,7 @@ const Hero = () => {
         </p>
         <h4 className="text-center text-md md:text-lg mt-1  font-semibold">
           <span className=" text-primary">04</span> &{" "}
-          <span className=" text-primary">05</span> February 2025
+          <span className=" text-primary">05</span> February 2026
         </h4>
         <div className="flex justify-center mt-6 flex-wrap gap-4">
           {/* register now */}
