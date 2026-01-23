@@ -658,7 +658,7 @@ const RegistrationForm = () => {
   };
 
   const handleWhatsappJoin = () => {
-    window.open("https://chat.whatsapp.com/KFvYk1b0YJH3fYpYJ1R6nY", "_blank");
+    window.open("https://chat.whatsapp.com/Gg6UhfvEO201RZuYngcdhe", "_blank");
   };
 
   return (
