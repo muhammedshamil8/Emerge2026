@@ -146,9 +146,6 @@ npm run build
 
 This project is part of the Emerge2026 conference initiative.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please ensure code follows the project's ESLint configuration.
 
 ## 📞 Support
 
