@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Home, Register, Committee, Login, Dashboard, Abstract, FeedbackForm } from '@/pages';
+import { Home, Register, Committee, Login, Dashboard, Abstract, FeedbackForm,Speakers } from '@/pages';
 import Layout from '@/layout';
 import { useAuth } from "@/libs/useAuth";
 import { AnimatePresence } from "framer-motion";
+import { Speaker } from 'lucide-react';
 
 // Function to remove the preloader
 const removePreloader = () => {
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/committee" element={<Committee />} />
+            <Route path="/speakers" element={<Speakers />} />
             <Route path='/register/abstract' element={<Abstract />} />
             <Route path='/Feedback' element={<FeedbackForm />} />
           </Route>

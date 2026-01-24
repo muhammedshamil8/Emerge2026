@@ -134,9 +134,13 @@ export default function Footer() {
             >
               Shamil
             </a>
-            {" & "}
+            {" , "}
             <a href="#" className="hover:text-[#005188] transition-colors">
               Dayyan
+            </a>
+            {" & "}
+            <a href="https://www.instagram.com/irsha.adtogro" className="hover:text-[#005188] transition-colors">
+              Irshad
             </a>
           </span>
         </p>

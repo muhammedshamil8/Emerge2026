@@ -222,9 +222,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex gap-3 sm:gap-6 flex-col">
-            {/* <div className="rounded-full bg-primary uppercase px-6 md:px-10 py-1.5 md:py-2.5 min-w-[240px] max-w-[240px] md:min-w-[340px] md:max-w-[340px] font-bold text-white text-sm  sm:!text-md md:!text-lg shadow-button cursor-pointer mx-auto" onClick={() => handleNavigate('/register')}>
-                REGISTER NOW
-              </div> */}
+            
             <div
               className="rounded-full bg-primary uppercase px-6 md:px-10 py-1.5 md:py-2.5 min-w-[240px] max-w-[240px] md:min-w-[340px] md:max-w-[340px] font-bold text-white text-sm  sm:!text-md md:!text-lg shadow-button cursor-pointer mx-auto flex items-center justify-center gap-2"
               onClick={handleDownloadBrochure}
