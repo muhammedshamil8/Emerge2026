@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState ,useEffect } from "react";
 import classNames from "classnames";
-import { Download } from "lucide-react";
+import { ChevronRight, Download } from "lucide-react";
 import EmeaBW from "@/assets/images/emea_bg.png";
 import { useNavigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
@@ -240,6 +240,13 @@ const Hero = () => {
               aims to foster meaningful scholarly exchange, generate actionable
               insights, and envision equitable, sustainable, and humane futures.
             </p>
+             <button
+              onClick={() => navigate("/speakers")}
+              className="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-[#003d66] transition duration-300 shadow-lg flex items-center gap-2 mx-auto"
+            >
+              View All Speakers
+              <ChevronRight size={20} />
+            </button>
           </div>
         </section>
       </div>
