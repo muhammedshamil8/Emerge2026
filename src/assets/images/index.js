@@ -16,8 +16,8 @@ import NurulFadhillah from './speakers/Nurul Fadhillah.jpeg';
 import Sheeja from './speakers/Sheeja .jpeg';
 import VilasM from './speakers/Vilas M.jpeg';
 import Hameed from './speakers/hameed.jpeg';
-
+import Bassam from './speakers/Bassam Ahmed.jpeg'
 export {
     EmeaBW, EmeaColor, Commerce, Commerce_big, Science, Science_big, Social, Social_big,
-    AhmadJabas, Mallikarjunappa, MuhammadShafi, NurulFadhillah, Sheeja, VilasM, Hameed
+    AhmadJabas, Mallikarjunappa, MuhammadShafi, NurulFadhillah, Sheeja, VilasM, Hameed, Bassam  
 };

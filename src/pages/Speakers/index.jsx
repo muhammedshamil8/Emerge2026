@@ -9,6 +9,7 @@ import {
   VilasM,
   Hameed,
 } from "@/assets/images";
+import { Bassam } from "../../assets/images";
 
 // Speaker Card Component with Cursor-following Effect
 const SpeakerCard = ({ speaker, index }) => {
@@ -87,18 +88,18 @@ const SpeakerCard = ({ speaker, index }) => {
             </div>
 
             {/* Speaker Info */}
-            <div className="p-4 text-center bg-gradient-to-b from-white to-[#F0F9FF]">
+            <div className="p-4 sm:p-5 text-center bg-gradient-to-b from-white to-[#F0F9FF] min-h-[120px] group-hover:min-h-fit flex flex-col justify-start transition-all duration-300">
               <h3
-                className="text-lg sm:text-xl font-bold text-[#005188] mb-1 transition-transform duration-300"
+                className="text-lg sm:text-xl font-bold text-[#005188] mb-2 transition-transform duration-300 line-clamp-2 group-hover:line-clamp-none"
                 style={{ transform: "translateZ(20px)" }}
               >
                 {speaker.name}
               </h3>
-              <p className="text-sm text-gray-600 leading-tight">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-4 group-hover:line-clamp-none text-center px-1 transition-all duration-300">
                 {speaker.designation}
               </p>
               {speaker.organization && (
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {speaker.organization}
                 </p>
               )}
@@ -125,40 +126,47 @@ function index() {
     },
     {
       name: "Dr. Mallikarjunappa",
-      designation: "Distinguished Speaker",
+      designation: "Professor, NITTE (Deemed to be University), Justice K S Hegde Institute of Management, Nitte - 574 110 Karkala (Taluk), Udupi (District), Karnataka, India",
       organization: "",
       image: Mallikarjunappa,
     },
     {
-      name: "Muhammad Shafi",
-      designation: "Distinguished Speaker",
+      name: "Dr. Muhammad Shafi",
+      designation: "Associate Professor, School of Management Studies,National Institute of Technology Calicut",
       organization: "",
       image: MuhammadShafi,
     },
     {
-      name: "Nurul Fadhillah",
-      designation: "Distinguished Speaker",
+      name: "Dr. Nurul Fadhillah",
+      designation: "S.Pd., M.Hum.\nVice Dean for Partnership, Students and Alumni Affairs of Tabiyah and Teacher Training Faculty,\n UIN Sultanah Nahrasiyah Lhokseumawe,",
       organization: "",
       image: NurulFadhillah,
     },
     {
       name: "Dr. Sheeja",
-      designation: "Distinguished Speaker",
+      designation: "Principal Scientist and HOD Division of Crop Improvement and Biotechnology ICAR-IISR, KOZHIKODE",
       organization: "",
       image: Sheeja,
     },
     {
       name: "Dr. Vilas M",
-      designation: "Distinguished Speaker",
+      designation: "Senior Professor Department of Studies and Research in Economics, Tumkur University, Karnataka",
       organization: "",
       image: VilasM,
     },
     {
       name: "Dr. Hameed",
-      designation: "Distinguished Speaker",
+      designation: "Department of Computer Science and Engineering, College of Engineering, Osmania University",
       organization: "",
       image: Hameed,
     },
+    {
+      name: "Bassam Ahmed",
+      designation: "Assistant Professor, University of Hodeidah, Yemen",
+      organization: "",
+      image: Bassam,
+
+    }
   ];
   const streamwiseCommittee = {
     label: "Streamwise Committee",
