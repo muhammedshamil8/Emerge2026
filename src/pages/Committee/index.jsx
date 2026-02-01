@@ -15,11 +15,13 @@ function index() {
         stream: "Arts",
         chairperson: "Mr. Roy P P",
         coordinator: "Dr. Hussain K",
+        phone: "+91 94953 86262",
       },
       {
         stream: "Commerce and Management",
         chairperson: "Dr. Kamalam Edathil",
         coordinator: "Dr. Aboobacker Sidique",
+        phone: "+91 97456 68667",
       },
     ],
   };
@@ -167,7 +169,7 @@ function index() {
         },
         {
           name: "Dr. Ashraf P",
-          designation: "Assistant Professor, Dept. of politics.",
+          designation: "Assistant Professor, Dept. of Political Science",
         },
       ],
     },
