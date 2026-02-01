@@ -945,7 +945,7 @@ const RegistrationForm = () => {
       transition={{ duration: 0.3 }}
       className="p-6 md:p-10   bg-white"
     >
-      <Alert
+      {/* <Alert
         className="max-w-[1100px] mx-auto mb-6"
         message="Informational Notes"
         type="info"
@@ -963,6 +963,30 @@ const RegistrationForm = () => {
             >
               Abstract Submission
             </button>
+          </>
+        }
+      /> */}
+      {/* join participant whatsapp alert */}
+      <Alert
+        className="max-w-[1100px] mx-auto mb-6"
+        message="Join our Participant WhatsApp Group for Updates!"
+        type="info"
+        showIcon
+        closable
+        description={
+          <>
+            <p className="mb-2">
+              Stay updated with the latest news and announcements by joining
+              our official WhatsApp group for conference participants.
+            </p>{" "}
+            <a
+              href="https://chat.whatsapp.com/KsMZKKRD2nR3ZAm5NBY1qn?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              Join WhatsApp Group
+            </a>
           </>
         }
       />
