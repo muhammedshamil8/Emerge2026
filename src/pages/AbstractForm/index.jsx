@@ -158,14 +158,17 @@ const RegistrationForm = () => {
       message.warning(
         "Please fill all the professional details required fields",
       );
-    } else if (formData.participation_type === "") {
+      return;
+    } else if (formData.preferred_session === "") {
       // Conference Participation
       message.warning(
         "Please fill all the conference participation required fields",
       );
+      return;
     } else if (formData.paper_title === "" || formData.abstract_file === null) {
       // Paper Submission
       message.warning("Please fill all the paper submission required fields");
+      return;
     }
     if (
       formData.preferred_presentation_type === "Oral" &&
@@ -192,6 +195,7 @@ const RegistrationForm = () => {
 
       if (abstractURL === null) {
         message.error("Error uploading abstract file");
+        setLoading(false);
         return;
       }
       // Add URLs to formData

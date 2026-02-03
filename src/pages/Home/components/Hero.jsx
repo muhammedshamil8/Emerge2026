@@ -86,14 +86,14 @@ const Hero = () => {
         <div className="flex justify-center mt-6 flex-wrap gap-4">
           {/* register now */}
           <button
-            onClick={() => navigate("/register")}
-            className="bg-primary hover:bg-[#005188]/80 hover:shadow-lg text-white font-semibold px-10 py-2 rounded-full shadow-lg mr-4 transition duration-300"
+            onClick={() => navigate("/")}
+            className="bg-red-900 hover:bg-red-800 hover:shadow-lg text-white font-semibold px-10 py-2 rounded-full shadow-lg mr-4 transition duration-300"
           >
-            Register Now →
+            Registration Closed
           </button>
           <button
-            onClick={() => navigate("/register/abstract")}
-            className="bg-white hover:bg-gray-100 text-primary font-semibold px-6 py-2  rounded-full shadow-lg border border-[#005188] flex items-center transition duration-300"
+            onClick={() => navigate("/")}
+            className="bg-red-900 hover:bg-red-800 text-white font-semibold px-6 py-2  rounded-full shadow-lg border  flex items-center transition duration-300"
           >
             Abstract Submission
           </button>
