@@ -678,9 +678,17 @@ const RegistrationForm = () => {
         {!submitted && (
           <>
             <h1 className="text-center text-2xl font-semibold mb-10">
-              Abstract Submission
+              Abstract Submission Form
             </h1>
+            <h2 className="text-center text-lg mb-6 text-red-600 font-semibold mt-16">
+             Abstract Registration closed 
+            </h2>
+            <h3 className="text-center text-md mb-32 text-gray-700 font-medium mt-4">
+              Registration for abstract submission is now closed. Thank you to all who showed interest in participating. For any further inquiries, please contact the event organizers.
+            </h3>
 
+
+            {/*
             <Steps
               current={current}
               onChange={setCurrent}
@@ -746,10 +754,11 @@ const RegistrationForm = () => {
                 </div>
               </div>
             </div>
+            */}
           </>
         )}
         {/* success show */}
-        {submitted && (
+        {/* {submitted && (
           <div className="bg-white shadow-lg py-4 sm:py-10 rounded-xl select-none">
             <Result
               status="success"
@@ -784,7 +793,7 @@ const RegistrationForm = () => {
               ]}
             />
           </div>
-        )}
+        )} */}
       </div>
     </motion.div>
   );

@@ -96,7 +96,18 @@ const Hero = () => {
             className="bg-red-900 hover:bg-red-800 text-white font-semibold px-6 py-2  rounded-full shadow-lg border  flex items-center transition duration-300"
           >
             Abstract Submission
+          </button> 
+          {/* join whatsapp btn */}
+          <button
+            onClick={() =>
+              window.open("https://chat.whatsapp.com/KsMZKKRD2nR3ZAm5NBY1qn?mode=gi_t", "_blank")
+            }
+            className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2  rounded-full shadow-lg flex items-center transition duration-300"
+          >
+            <FaWhatsapp className="mr-2" size={16} />
+            Join WhatsApp Group
           </button>
+
           {/* download brochure */}
           {/* <button
             onClick={handleDownloadBrochure}
